@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Area Calculator</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+    <body class="p-4 bg-gray-400">
+        <main>
+            <!--main container-->
+            <div class="flex flex-col md:flex-row ">
+                <!--shape card container-->
+                <div class="flex-1  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4">
+                    <!--triangle-->
+                    <div>
+                        <img class="mx-auto" src="images/triangle.png" alt="Triangle png">
+                        <h2 class="text-center text-2xl ">Triangle</h2>
+                        <p class>Area = 0.5 X b X h</p>
+                        <div class="flex">
+                            <input id="Triangle-Base-Input" class="pl-2 w-20" type="text" placeholder="Base">sp<span></span>
+                            <span>cm</span>
+                            <br>
+                            <input id="Triangle-Height-Input" class="pl-2 w-20" type="text"
+                                placeholder="Height"> <span>cm</span>
+                        </div>
+                        <button onclick="TriangleAreaCalculate()"
+                            class="btn btn-secondary mt-4">Calculate</button>
+                        <!-- <p>Area = <span class="Triangle-Area"></span> cm<sup>2</sup></p> -->
+                    </div>
+                    <div>
+                        <!--rectangle-->
+                        <img class="mx-auto" src="images/rectangular.png" alt="Triangle png">
+                        <h2 class="text-center text-2xl">Rectangle</h2>
+                        <p>Area = w X h</p>
+                        <div class="flex">
+                            <input id="Rectangle-Width-Input" class="pl-2 w-20 h-6 mt-6" type="text" placeholder="width">
+                            <span class="mt-6">cm</span>
+                            <span>
+                                <br>
+                                <input id="Rectangle-Height-Input" class="pl-2 w-20" type="text"
+                                    placeholder="Height"><span>cm</span>
+                        </div>
+
+                        <button onclick="RectangleAreaCalculate()"
+                            class="btn btn-secondary  mt-4">Calculate</button>
+                        <!-- <p>Area = <span id="Rectangle-Area"></span> cm<sup>2</sup></p> -->
+                    </div>
+                    <div>
+                        <!--hrombus-->
+                        <img class="mx-auto" src="images/Rhombus.png" alt="Triangle png">
+                        <h2 class="text-center text-2xl">Hrumbus</h2>
+                        <p>Area = b X h</p>
+                        <div class="flex">
+                            <input id="Hrumbus-Base-Input" class="pl-2 w-20" type="text" placeholder="Base"> <span>cm</span>
+                            <span>
+
+                                <input id="Hrumbus-Height-Input" class="pl-2 w-20" type="text"
+                                    placeholder="Height"><span>cm</span>
+                        </div>
+                        <br>
+                        <button onclick="HrumbusAreaCalculate()"
+                            class="btn btn-secondary  mt-4">Calculate</button>
+                        <!-- <p id="Hrumbus-Area"><span>Area = <span></span> cm<sup>2</sup></span></p> -->
+                    </div>
+                </div>
+                <!--Area container-->
+                <div class="border-4 p-4 ml-4 font-light hover:border-red-500">
+                    <h1>Area Calculate</h1>
+                    <p>
+                    <h1>Triangle-area = </h1> <span id="Triangle-Area"></span></p>
+                    <p>
+                    <h1>Rectangle-area = </h1> <span id="Rectangle-Area"></span></p>
+                    <p>
+                    <h1>Hrumbus-area = </h1> <span id="Hrumbus-Area"></span></p>
+                </div>
+            </div>
+        </main>
+        <script src="calculate.js"></script>
+
+    </body>
+</html>
